@@ -18,3 +18,6 @@ access_token = client.generate_access_token(authorization_response=redirect_url)
 video_id = input('Enter Video ID: ')
 response = client.videos.rate(video_id, rating="like")
 print(response)
+
+rating = client.videos.get_rating(video_id=video_id)
+print(rating)
